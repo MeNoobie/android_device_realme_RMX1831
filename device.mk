@@ -9,6 +9,9 @@ LOCAL_PATH:= device/realme/RMX1831
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
+# Overlay from mtk-telephony-ext
+-include $(LOCAL_PATH)/vendor/mediatek/hardware/telephony-ext/overlay.mk
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
