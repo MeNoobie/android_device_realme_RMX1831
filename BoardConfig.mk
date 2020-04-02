@@ -13,6 +13,9 @@ TARGET_FLATTEN_APEX := true
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := RMX1831 
 
+# system-as-root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -99,9 +102,14 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/xml/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/xml/framework_compatibility_matrix.xml
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Display brightness
 BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 MAX_BRIGHTNESS := 255
+
+# Display
+TARGET_SCREEN_HEIGHT := 1520
+TARGET_SCREEN_WIDTH := 720
 
 # Treble
 BOARD_VNDK_VERSION := current
